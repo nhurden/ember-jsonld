@@ -14,7 +14,8 @@
     "**/.*"
   ],
   "dependencies": {
-    "ember": ">=1.2 <2"
+    "ember": ">=1.2 <2",
+    "jsonld.js": "nhurden/jsonld.js"
   },
   "devDependencies": {}
 }

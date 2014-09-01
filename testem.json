@@ -1,7 +1,10 @@
 {
-  "framework": "jasmine",
+  "framework": "jasmine2",
   "src_files": [
-    "lib/**/*.js",
+    "bower_components/ember/ember.js",
+    "bower_components/jsonld.js/js/jsonld.js",
+    "dist/globals/*.js",
+    "node_modules/underscore/underscore.js",
     "spec/**/*.js"
   ]
 }

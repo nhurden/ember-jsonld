@@ -8,9 +8,10 @@
     "broccoli": "^0.12.2",
     "broccoli-cli": "0.0.1",
     "broccoli-dist-es6-module": "^0.2.0",
-    "rf-release": "^0.3.1",
     "qunitjs": "~1.12.0",
-    "testem": "0.6.18"
+    "rf-release": "^0.3.1",
+    "testem": "0.6.18",
+    "underscore": "^1.7.0"
   },
   "scripts": {
     "test": "node_modules/.bin/bower install && rm -rf dist && node_modules/.bin/broccoli build dist && node_modules/.bin/testem -l PhantomJS ci",
@@ -30,5 +31,7 @@
     "url": "https://github.com/nhurden/ember-jsonld/issues"
   },
   "homepage": "https://github.com/nhurden/ember-jsonld/",
-  "dependencies": {}
+  "dependencies": {
+    "jsonld.js": "nhurden/jsonld.js"
+  }
 }
