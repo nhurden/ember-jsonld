@@ -8,5 +8,7 @@
     "dist/globals/*.js",
     "node_modules/underscore/underscore.js",
     "spec/**/*.js"
-  ]
+  ],
+  "launch_in_dev": ["PhantomJS"],
+  "launch_in_ci": ["PhantomJS"]
 }

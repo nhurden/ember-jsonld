@@ -14,7 +14,7 @@
     "underscore": "^1.7.0"
   },
   "scripts": {
-    "test": "node_modules/.bin/bower install && rm -rf dist && node_modules/.bin/broccoli build dist && node_modules/.bin/testem -l PhantomJS ci",
+    "test": "node_modules/.bin/bower install && rm -rf dist && node_modules/.bin/broccoli build dist && node_modules/.bin/testem ci",
     "release": "npm test && node_modules/.bin/release"
   },
   "repository": {
