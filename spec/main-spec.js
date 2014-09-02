@@ -65,4 +65,12 @@ describe('ember-jsonld', function() {
       done();
     });
   });
+
+  it('can catch errors', function(done) {
+    ld.fromRDF(LIBRARY_NQUADS, {format: 'application/invalid'}).catch(function(error) {
+      expect(error.name).toBe('jsonld.UnknownFormat');
+    }).finally(function() {
+      done();
+    });
+  });
 });

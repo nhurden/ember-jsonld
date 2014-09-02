@@ -187,3 +187,5 @@ LIBRARY_NQUADS =
 '<http://example.org/library/the-republic> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://example.org/vocab#Book> .\n' +
 '<http://example.org/library> <http://example.org/vocab#contains> <http://example.org/library/the-republic> .\n' +
 '<http://example.org/library> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://example.org/vocab#Library> .\n';
+
+LIBRARY_INVALID_URL = 'ftp://example.com/index.jsonld';
