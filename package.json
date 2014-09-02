@@ -22,7 +22,11 @@
   },
   "keywords": [
     "ember",
-    "jsonld"
+    "jsonld",
+    "JSON",
+    "Linked Data",
+    "JSON-LD",
+    "RDF"
   ],
   "author": "Nicholas Hurden",
   "license": "MIT",
