@@ -4,8 +4,9 @@
     "bower_components/jquery/dist/jquery.js",
     "bower_components/handlebars/handlebars.js",
     "bower_components/ember/ember.js",
-    "bower_components/jsonld.js/js/jsonld.js",
     "dist/globals/*.js",
+    "node_modules/es6-promise/dist/promise-1.0.0.js",
+    "node_modules/jsonld/js/jsonld.js",
     "node_modules/underscore/underscore.js",
     "spec/**/*.js"
   ],
