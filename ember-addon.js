@@ -51,8 +51,8 @@ EmberCLIJsonLd.prototype.included = function included(app) {
 
   //es6-promise needs to be imported before jsonld.js
   this.app.import({
-    development: 'vendor/ember-jsonld/node_modules/es6-promise/dist/promise-1.0.0.js',
-    production: 'vendor/ember-jsonld/node_modules/es6-promise/dist/promise-1.0.0.min.js',
+    development: 'vendor/ember-jsonld/node_modules/jsonld/node_modules/es6-promise/dist/promise-1.0.0.js',
+    production: 'vendor/ember-jsonld/node_modules/jsonld/node_modules/es6-promise/dist/promise-1.0.0.min.js',
   });
 
   this.app.import('vendor/ember-jsonld/node_modules/jsonld/js/jsonld.js');
