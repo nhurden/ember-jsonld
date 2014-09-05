@@ -1,15 +1,16 @@
-import Ember from 'ember';
+"use strict";
+var Ember = require("ember")["default"] || require("ember");
 
 var slice = Array.prototype.slice;
 
-export function expand(input) {
+function expand(input) {
   if (arguments.length < 1) {
     throw new TypeError('Could not expand, too few arguments.');
   }
   return promisify(jsonld.expand, slice.call(arguments));
 }
 
-export function compact(input, ctx) {
+exports.expand = expand;function compact(input, ctx) {
   if (arguments.length < 2) {
     throw new TypeError('Could not compact: too few arguments.');
   }
@@ -22,42 +23,42 @@ export function compact(input, ctx) {
   return promisify(compactFn, slice.call(arguments));
 }
 
-export function flatten(input) {
+exports.compact = compact;function flatten(input) {
   if (arguments.length < 1) {
     throw new TypeError('Could not flatten: too few arguments.');
   }
   return promisify(jsonld.flatten, slice.call(arguments));
 }
 
-export function frame(input, aFrame) {
+exports.flatten = flatten;function frame(input, aFrame) {
   if (arguments.length < 2) {
     throw new TypeError('Could not frame: too few arguments.');
   }
   return promisify(jsonld.frame, slice.call(arguments));
 }
 
-export function fromRDF(dataset) {
+exports.frame = frame;function fromRDF(dataset) {
   if (arguments.length < 1) {
     throw new TypeError('Could not convert from RDF: too few arguments.');
   }
   return promisify(jsonld.fromRDF, slice.call(arguments));
 }
 
-export function toRDF(input) {
+exports.fromRDF = fromRDF;function toRDF(input) {
   if (arguments.length < 1) {
     throw new TypeError('Could not convert to RDF: too few arguments.');
   }
   return promisify(jsonld.toRDF, slice.call(arguments));
 }
 
-export function normalize(input) {
+exports.toRDF = toRDF;function normalize(input) {
   if (arguments.length < 1) {
     throw new TypeError('Could not normalize: too few arguments.');
   }
   return promisify(jsonld.normalize, slice.call(arguments));
 }
 
-function promisify(fn, args) {
+exports.normalize = normalize;function promisify(fn, args) {
   return new Ember.RSVP.Promise(function(resolve, reject) {
     fn.apply(null, args.concat(function(err, value) {
       if(!err) {
