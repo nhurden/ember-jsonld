@@ -21,7 +21,7 @@
     "RDF"
   ],
   "ember-addon": {
-    "main": "lib/ember-cli-jsonld.js"
+    "main": "ember-addon.js"
   },
   "author": "Nicholas Hurden",
   "license": "MIT",
