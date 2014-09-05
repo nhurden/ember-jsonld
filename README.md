@@ -3,19 +3,18 @@
 An Ember-friendly [jsonld.js][jsonld.js] wrapper.
 
 * Returns [RSVP promises][RSVP].
-* Can be installed as an Ember-CLI addon
+* Can be installed as an Ember-CLI addon.
 
 ## Installation
 
-### ember-addon (for ember-cli)
+### Ember-CLI
 `npm install --save-dev ember-jsonld`
 
-### bower
-` bower install ember-jsonld`
+### Bower
+`bower install ember-jsonld`
 
 ## Usage (ember-cli)
-ember-jsonld returns RSVP promises, so all RSVP.js features are
-available:
+ember-jsonld returns RSVP promises, so all RSVP.js features are available:
 ```js
 import ld from 'ember-jsonld';
 
