@@ -15,12 +15,12 @@ An Ember-friendly [jsonld.js][jsonld.js] wrapper.
 
 ## Usage (ember-cli)
 ```js
-import { expand, compact, flatten, frame } from 'ember-jsonld';
+import { expand, compact, flatten, frame, toRDF, normalize } from 'ember-jsonld';
 
 expand(json).then(function(expanded) {
   // expansion success
 }).catch(function(error) {
-  // expansion error
+  // expansion failure
 }).finally(function() {
   // expansion success or failure
 });
@@ -29,7 +29,9 @@ var hash = Ember.RSVP.hash({
   expanded: expand(json),
   compacted: compact(json, context),
   flattened: flatten(json),
-  framed: frame(json, frame)
+  framed: frame(json, frame),
+  nquads: toRDF(json, {format: 'application/nquads'}),
+  normalized: normalize(json, {format: 'application/nquads'})
 });
 ```
 
