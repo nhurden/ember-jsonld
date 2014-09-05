@@ -2,14 +2,21 @@ define(
   [],
   function() {
     "use strict";
+    /* jshint node: true */
     'use strict';
 
     var path = require('path');
-    var fs   = require('fs');
+    var pickFiles = require('broccoli-static-compiler');
 
     function EmberCLIJsonLd(project) {
       this.project = project;
       this.name    = 'Ember CLI jsonld';
+
+      var tree = unwatchedTree('node_modules/ember-jsonld/dist');
+      this.tree = pickFiles(tree, {
+        srcDir: '.',
+        destDir: 'ember-jsonld'
+      });
     }
 
     function unwatchedTree(dir) {
@@ -19,18 +26,17 @@ define(
       };
     }
 
-    EmberCLIJsonLd.prototype.treeFor = function treeFor(name) {
-      var treePath =  path.join('node_modules', 'ember-jsonld', name);
 
-      if (fs.existsSync(treePath)) {
-        return unwatchedTree(treePath);
+    EmberCLIJsonLd.prototype.treeFor = function treeFor(name) {
+      if (name === "vendor") {
+        return this.tree;
       }
     };
 
     EmberCLIJsonLd.prototype.included = function included(app) {
       this.app = app;
 
-      this.app.import('vendor/ember-jsonld/dist/named-amd/main.js', {
+      this.app.import('vendor/ember-jsonld/named-amd/main.js', {
         exports: {
           'ember-jsonld': [
             'expand',

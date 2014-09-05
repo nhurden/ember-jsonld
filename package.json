@@ -30,6 +30,7 @@
   },
   "homepage": "https://github.com/nhurden/ember-jsonld/",
   "dependencies": {
+    "broccoli-static-compiler": "^0.1.4",
     "jsonld.js": "nhurden/jsonld.js"
   },
   "devDependencies": {

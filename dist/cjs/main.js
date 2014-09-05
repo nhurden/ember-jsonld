@@ -1,6 +1,5 @@
 "use strict";
 var Ember = require("ember")["default"] || require("ember");
-var jsonld = require("jsonld")["default"] || require("jsonld");
 
 var slice = Array.prototype.slice;
 
