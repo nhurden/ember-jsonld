@@ -7,7 +7,7 @@ An Ember-friendly [jsonld.js][jsonld.js] wrapper.
 
 ## Installation
 
-### Ember-CLI
+### Ember CLI
 `npm install --save-dev ember-jsonld`
 
 ### Bower
