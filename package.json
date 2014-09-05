@@ -3,15 +3,6 @@
   "version": "0.0.1",
   "description": "An Ember-friendly jsonld.js wrapper.",
   "main": "dist/cjs/main.js",
-  "devDependencies": {
-    "bower": "^1.3.5",
-    "broccoli": "^0.12.2",
-    "broccoli-cli": "0.0.1",
-    "broccoli-dist-es6-module": "^0.2.0",
-    "rf-release": "^0.3.1",
-    "testem": "0.6.18",
-    "underscore": "^1.7.0"
-  },
   "scripts": {
     "test": "node_modules/.bin/bower install && rm -rf dist && node_modules/.bin/broccoli build dist && node_modules/.bin/testem ci",
     "release": "npm test && node_modules/.bin/release"
@@ -22,12 +13,16 @@
   },
   "keywords": [
     "ember",
+    "ember-addon",
     "jsonld",
     "JSON",
     "Linked Data",
     "JSON-LD",
     "RDF"
   ],
+  "ember-addon": {
+    "main": "lib/ember-cli-jsonld.js"
+  },
   "author": "Nicholas Hurden",
   "license": "MIT",
   "bugs": {
@@ -36,5 +31,14 @@
   "homepage": "https://github.com/nhurden/ember-jsonld/",
   "dependencies": {
     "jsonld.js": "nhurden/jsonld.js"
+  },
+  "devDependencies": {
+    "bower": "^1.3.5",
+    "broccoli": "^0.12.2",
+    "broccoli-cli": "0.0.1",
+    "broccoli-dist-es6-module": "^0.2.0",
+    "rf-release": "^0.3.1",
+    "testem": "0.6.18",
+    "underscore": "^1.7.0"
   }
 }
