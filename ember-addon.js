@@ -13,7 +13,7 @@ function EmberCLIJsonLd(project) {
     srcDir: '.',
     files: ['dist/named-amd/*.js',
             'node_modules/jsonld/js/jsonld.js',
-            'node_modules/es6-promise/dist/*.js'],
+            'node_modules/jsonld/node_modules/es6-promise/dist/*.js'],
     destDir: 'ember-jsonld'
   });
 }
