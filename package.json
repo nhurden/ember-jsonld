@@ -4,8 +4,7 @@
   "description": "An Ember-friendly jsonld.js wrapper.",
   "main": "dist/cjs/main.js",
   "scripts": {
-    "test": "node_modules/.bin/bower install && rm -rf dist && node_modules/.bin/broccoli build dist && node_modules/.bin/testem ci",
-    "release": "npm test && node_modules/.bin/release"
+    "test": "node_modules/.bin/bower install && rm -rf dist && node_modules/.bin/broccoli build dist && node_modules/.bin/testem ci"
   },
   "repository": {
     "type": "git",
