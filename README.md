@@ -1,4 +1,5 @@
 # ember-jsonld
+[![Build Status](https://travis-ci.org/nhurden/ember-jsonld.svg?branch=master)](https://travis-ci.org/nhurden/ember-jsonld)
 
 An Ember-friendly [jsonld.js][jsonld.js] wrapper.
 
