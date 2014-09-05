@@ -12,9 +12,12 @@ define(
       this.project = project;
       this.name    = 'Ember CLI jsonld';
 
-      var tree = unwatchedTree('node_modules/ember-jsonld/dist');
+      var tree = unwatchedTree('node_modules/ember-jsonld');
       this.tree = pickFiles(tree, {
         srcDir: '.',
+        files: ['dist/named-amd/*.js',
+                'node_modules/jsonld/js/jsonld.js',
+                'node_modules/es6-promise/dist/*.js'],
         destDir: 'ember-jsonld'
       });
     }
@@ -36,7 +39,7 @@ define(
     EmberCLIJsonLd.prototype.included = function included(app) {
       this.app = app;
 
-      this.app.import('vendor/ember-jsonld/named-amd/main.js', {
+      this.app.import('vendor/ember-jsonld/dist/named-amd/main.js', {
         exports: {
           'ember-jsonld': [
             'expand',
@@ -49,6 +52,14 @@ define(
           ]
         }
       });
+
+      //es6-promise needs to be imported before jsonld.js
+      this.app.import({
+        development: 'vendor/ember-jsonld/node_modules/es6-promise/dist/promise-1.0.0.js',
+        production: 'vendor/ember-jsonld/node_modules/es6-promise/dist/promise-1.0.0.min.js',
+      });
+
+      this.app.import('vendor/ember-jsonld/node_modules/jsonld/js/jsonld.js');
     };
 
     module.exports = EmberCLIJsonLd;
