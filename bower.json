@@ -1,8 +1,8 @@
 {
   "name": "ember-jsonld",
-  "version": "0.0.1",
+  "version": "0.1.0",
   "authors": [
-    "Nicholas Hurden <nicholas@nhurden.com>"
+    "Nicholas Hurden <git@nhurden.com>"
   ],
   "license": "MIT",
   "ignore": [
