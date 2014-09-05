@@ -16,9 +16,9 @@ An Ember-friendly [jsonld.js][jsonld.js] wrapper.
 ## Usage (ember-cli)
 ember-jsonld returns RSVP promises, so all RSVP.js features are available:
 ```js
-import ld from 'ember-jsonld';
+import { expand, compact, flatten, frame } from 'ember-jsonld';
 
-ld.expand(json).then(function(expanded) {
+expand(json).then(function(expanded) {
   // expansion success
 }).catch(function(error) {
   // expansion error
@@ -27,14 +27,14 @@ ld.expand(json).then(function(expanded) {
 });
 
 var hash = Ember.RSVP.hash({
-  expanded: ld.expand(json),
-  compacted: ld.compact(json, context),
-  flattened: ld.flatten(json),
-  framed: ld.frame(json, context)
+  expanded: expand(json),
+  compacted: compact(json, context),
+  flattened: flatten(json),
+  framed: frame(json, frame)
 });
 ```
 
-## Contibuting
+## Contributing
 Installing dependencies and running tests:
 ```sh
 npm install && npm test
