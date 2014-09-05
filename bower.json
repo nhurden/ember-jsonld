@@ -1,6 +1,12 @@
 {
   "name": "ember-jsonld",
   "version": "0.1.0",
+  "main": [
+    "dist/amd/main.js",
+    "dist/cjs/main.js",
+    "dist/globals/main.js",
+    "dist/named-amd/main.js"
+  ],
   "authors": [
     "Nicholas Hurden <git@nhurden.com>"
   ],
