@@ -1,3 +1,7 @@
+0.2.0
+-----
+Add RSVP.js promise labels for use in Ember Inspector.
+
 0.1.1
 -----
 Fix app.import of es6-promise.
