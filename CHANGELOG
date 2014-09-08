@@ -1,3 +1,7 @@
+0.3.0
+-----
+Wrap async callbacks in Ember.run.
+
 0.2.0
 -----
 Add RSVP.js promise labels for use in Ember Inspector.
