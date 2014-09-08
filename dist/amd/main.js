@@ -71,12 +71,14 @@ define(
 
     function promisify(fn, args, label) {
       return new Ember.RSVP.Promise(function(resolve, reject) {
-        fn.apply(null, args.concat(function(err, value) {
-          if(!err) {
-            resolve(value);
-          } else {
-            reject(err);
-          }
+        fn.apply(null, args.concat(function(error, value) {
+          Ember.run(function() {
+            if (error) {
+              reject(error);
+            } else {
+              resolve(value);
+            }
+          });
         }));
       }, formatLabel(label));
     }
