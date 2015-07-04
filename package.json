@@ -1,6 +1,6 @@
 {
   "name": "ember-jsonld",
-  "version": "0.3.0",
+  "version": "0.4.0",
   "description": "An Ember-friendly jsonld.js wrapper.",
   "main": "dist/cjs/main.js",
   "scripts": {
@@ -30,7 +30,7 @@
   "homepage": "https://github.com/nhurden/ember-jsonld/",
   "dependencies": {
     "broccoli-static-compiler": "^0.1.4",
-    "jsonld": "nhurden/jsonld.js"
+    "jsonld": "digitalbazaar/jsonld.js#b41a0bad74010f09df7e8d32d8e948d24453f6cd"
   },
   "devDependencies": {
     "bower": "^1.3.5",

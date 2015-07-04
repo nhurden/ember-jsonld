@@ -1,3 +1,7 @@
+0.4.0
+-----
+Update jsonld dependency.
+
 0.3.0
 -----
 Wrap async callbacks in Ember.run.
