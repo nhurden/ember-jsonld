@@ -34,7 +34,7 @@
   },
   "homepage": "https://github.com/nhurden/ember-jsonld/",
   "dependencies": {
-    "jsonld": "digitalbazaar/jsonld.js#b41a0bad74010f09df7e8d32d8e948d24453f6cd",
+    "jsonld": "0.4.6",
     "ember-cli-babel": "^5.1.5"
   },
   "devDependencies": {
