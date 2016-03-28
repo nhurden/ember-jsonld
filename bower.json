@@ -1,26 +1,9 @@
 {
   "name": "ember-jsonld",
-  "version": "0.4.0",
-  "main": [
-    "dist/amd/main.js",
-    "dist/cjs/main.js",
-    "dist/globals/main.js",
-    "dist/named-amd/main.js"
-  ],
-  "authors": [
-    "Nicholas Hurden <git@nhurden.com>"
-  ],
-  "license": "MIT",
-  "ignore": [
-    "bower_components",
-    "node_modules",
-    "package.json",
-    "testem.json",
-    "test.js",
-    "**/.*"
-  ],
   "dependencies": {
-    "ember": ">=1.2 <2"
-  },
-  "devDependencies": {}
+    "ember": "~2.4.1",
+    "ember-cli-shims": "0.1.0",
+    "ember-cli-test-loader": "0.2.2",
+    "ember-qunit-notifications": "0.1.0"
+  }
 }
