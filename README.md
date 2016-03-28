@@ -1,20 +1,13 @@
 # ember-jsonld
-[![Build Status](https://travis-ci.org/nhurden/ember-jsonld.svg?branch=master)](https://travis-ci.org/nhurden/ember-jsonld)
-
 An Ember-friendly [jsonld.js][jsonld.js] wrapper.
 
 * Returns [RSVP promises][RSVP].
 * Can be installed as an Ember-CLI addon.
 
 ## Installation
+`ember install ember-jsonld`
 
-### Ember CLI
-`npm install --save-dev ember-jsonld`
-
-### Bower
-`bower install --save nhurden/jsonld.js ember-jsonld`
-
-## Usage (ember-cli)
+## Usage
 ```js
 import { expand, compact, flatten, frame, toRDF, normalize } from 'ember-jsonld';
 
