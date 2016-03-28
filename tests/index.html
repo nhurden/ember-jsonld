@@ -21,6 +21,16 @@
     {{content-for "body"}}
     {{content-for "test-body"}}
 
+    <!--PhantomJS bind polyfill-->
+    <script>
+      Function.prototype.bind = Function.prototype.bind || function (thisp) {
+        var fn = this;
+        return function () {
+          return fn.apply(thisp, arguments);
+        };
+      };
+    </script>
+
     <script src="testem.js" integrity=""></script>
     <script src="assets/vendor.js"></script>
     <script src="assets/test-support.js"></script>
