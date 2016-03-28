@@ -1,3 +1,8 @@
+0.5.0
+-----
+Move to modern ember addon structure.
+Update jsonld to 0.4.6.
+
 0.4.0
 -----
 Update jsonld dependency.
